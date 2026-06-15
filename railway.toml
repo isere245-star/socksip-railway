@@ -1,0 +1,5 @@
+[build]
+builder = "DOCKERFILE"
+
+[deploy]
+startCommand = "socat OPENSSL-LISTEN:443,bind=0.0.0.0,reuseaddr,cert=/cert.pem,key=/key.pem,fork TCP4-LISTEN:1,reuseaddr,fork"
